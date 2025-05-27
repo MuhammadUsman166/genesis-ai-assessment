@@ -1,0 +1,15 @@
+<label>Search User</label>
+<input type="text" placeholder="search user" (keyup)="filterUser($event)">
+
+<h4>User List</h4>
+<hr>
+<ul *ngIf="user.length > 0">
+    <li *ngFor="let item of user">
+        <h4>Name</h4>
+       {{item.name}}
+        <h4>email</h4>
+       {{item.email}}
+    </li>
+</ul>
+
+<p *ngIf="user.length <= 0"> <strong>No record found</strong></p>
